@@ -123,7 +123,7 @@ class SwaggerGenerator(object):
         # type: (RouteEntry) -> Dict[str, Any]
         current = {
             'consumes': view.content_types,
-            'produces': ['application/json'],
+            'produces': view.content_types,
             'responses': self._generate_precanned_responses(),
             'x-amazon-apigateway-integration': self._generate_apig_integ(
                 view),
